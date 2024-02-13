@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.calculator {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    border: 10px solid #cccccc86;
+    /* height: 600px; */
+    width: 400px;
+}
+
+.display {
+    height: 100px;
+    background-color: #ccc;
+    margin-bottom: 5px;
+    font-size: 50px;
+    text-align: right;
+    padding: 0px 10px 0px 0px;
+    justify-items: center;
+    vertical-align: middle;
+    font-weight: 700;
+    line-height: 100px;
+    min-width: 300px;
+}
+
+.grid {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+button {
+    height: 70px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: larger;
+
+}
+
+button[value='0'] {
+    grid-column: 1/3;
+}
+
+/*
+all blue then all numbers chnage to green then all 
+*/
+button {
+    background-color: #1E90FF;
+}
+
+#num-btn {
+    background-color: rgb(68, 151, 55);
+}
+
+.grid button:nth-child(4n+0),
+.grid button:last-child {
+    background-color: #E68B01;
+}
+
+button:active {
+    opacity: 0.9;
+}
